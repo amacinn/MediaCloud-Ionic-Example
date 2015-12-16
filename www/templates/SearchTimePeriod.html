@@ -1,0 +1,9 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <h1>Search for {{keyword}}</h1>
+    <p ng-if="data.sentenceCount==null"><ion-spinner></ion-spinner></p>
+    <p ng-if="data.sentenceCount!=null">There are {{data.sentenceCount | number}} results.</p>
+    <h1>{{startDate}}</h1>
+    <h1>{{endDate}}</h1>
+  </ion-content>
+</ion-view>

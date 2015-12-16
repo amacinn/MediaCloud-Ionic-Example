@@ -42,8 +42,20 @@ angular.module('mc', ['ionic', 'mc.controllers', 'mc.services', 'mc.config'])
         controller: 'SearchCtrl'
       }
     }
+  })
+
+  //Code written here is from Ali, based on a previous homework we did.
+  .state('app.searchQuery', {
+    cache: false,
+    url: '/search/:keyword/:startDate/:endDate',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html',
+        controller: 'SearchTimePeriod'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search/kittens');
+  $urlRouterProvider.otherwise('/app/search/pierce');
 });
